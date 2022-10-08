@@ -1,3 +1,18 @@
+--- Running the kubectl run ---
+pod/udacity-project-ml created
+
+--- Running the kubectl get pods ---
+NAME                 READY   STATUS              RESTARTS   AGE
+udacity-project-ml   0/1     ContainerCreating   0          0s
+kubectl controls the Kubernetes cluster manager.
+
+--- Running port forward ---
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
+
+------ Logs from the app in Kubernetes ----
  * Serving Flask app "app" (lazy loading)
  * Environment: production
    WARNING: Do not use the development server in a production environment.
@@ -22,3 +37,12 @@ INFO:flask.app:output prediction: [20.35373177134412]
 INFO:flask.app:prediction: [20.35373177134412]
 172.17.0.1 - - [08/Oct/2022 10:21:27] "POST /predict HTTP/1.1" 200 -
 INFO:werkzeug:172.17.0.1 - - [08/Oct/2022 10:21:27] "POST /predict HTTP/1.1" 200 -
+
+--- Running make prediction script
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+
