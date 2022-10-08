@@ -1,0 +1,61 @@
+[+] Building 41.6s (9/9) FINISHED                                                                                                                                                                    
+ => [internal] load build definition from Dockerfile                                                                                                                                            0.0s
+ => => transferring dockerfile: 38B                                                                                                                                                             0.0s
+ => [internal] load .dockerignore                                                                                                                                                               0.0s
+ => => transferring context: 2B                                                                                                                                                                 0.0s
+ => [internal] load metadata for docker.io/library/python:3.7.3-stretch                                                                                                                         2.8s
+ => [internal] load build context                                                                                                                                                               0.0s
+ => => transferring context: 6.33kB                                                                                                                                                             0.0s
+ => [1/4] FROM docker.io/library/python:3.7.3-stretch@sha256:205cafadbb7f0c48f2a6d655eb100a9675aa85e6e73958860f488406cce09779                                                                   0.0s
+ => CACHED [2/4] WORKDIR /app                                                                                                                                                                   0.0s
+ => [3/4] COPY . app.py /app/                                                                                                                                                                   0.0s
+ => [4/4] RUN pip install --no-cache-dir --upgrade pip &&    pip install --no-cache-dir --trusted-host pypi.pyhton.org -r requirements.txt                                                     37.0s
+ => exporting to image                                                                                                                                                                          1.7s
+ => => exporting layers                                                                                                                                                                         1.7s
+ => => writing image sha256:33ad9ccb1ca648f2063cd9e1087666c4f1930b1981e176916b198853c1adf4a3                                                                                                    0.0s 
+ => => naming to docker.io/library/udacity-project-ml                                                                                                                                           0.0s 
+                                                                                                                                                                                                     
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+REPOSITORY           TAG       IMAGE ID       CREATED             SIZE
+udacity-project-ml   latest    33ad9ccb1ca6   2 seconds ago       1.19GB
+<none>               <none>    0bfe09db758d   6 minutes ago       1.19GB
+<none>               <none>    0ad856dc55ac   41 minutes ago      1.19GB
+<none>               <none>    60ca3dc26d70   44 minutes ago      1.19GB
+<none>               <none>    7c71953db12d   48 minutes ago      1.19GB
+<none>               <none>    40cea633e642   50 minutes ago      1.29GB
+<none>               <none>    33a23ee6688f   52 minutes ago      1.29GB
+<none>               <none>    38f7e1b0d4ad   53 minutes ago      1.23GB
+<none>               <none>    f2fad6b0d08c   57 minutes ago      1.23GB
+<none>               <none>    d199d3251d83   About an hour ago   1.23GB
+<none>               <none>    0a83708dc6a4   About an hour ago   1.23GB
+<none>               <none>    ad3b42e8d2d1   About an hour ago   1.23GB
+<none>               <none>    234283c3244f   About an hour ago   1.23GB
+<none>               <none>    a2395f27ddbb   About an hour ago   1.23GB
+<none>               <none>    62ef84ac75d5   2 hours ago         1.3GB
+<none>               <none>    269c363fdd03   2 hours ago         1.3GB
+<none>               <none>    220aef8ce1e8   3 hours ago         1.3GB
+hello-world          v1        f7552827c769   2 days ago          946MB
+hello-world          latest    578c47e24a6c   2 days ago          924MB
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 129-516-115
+[2022-10-04 13:36:52,728] INFO in app: JSON payload: 
+{'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
+[2022-10-04 13:36:52,743] INFO in app: Inference payload DataFrame: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-10-04 13:36:52,751] INFO in app: Scaling Payload: 
+   CHAS     RM    TAX  PTRATIO      B  LSTAT
+0     0  6.575  296.0     15.3  396.9   4.98
+[2022-10-04 13:36:52,754] INFO in app: output prediction: [20.35373177134412]
+INFO:flask.app:output prediction: [20.35373177134412]
+[2022-10-04 13:36:52,754] INFO in app: prediction: [20.35373177134412]
+INFO:flask.app:prediction: [20.35373177134412]
+172.17.0.1 - - [04/Oct/2022 13:36:52] "POST /predict HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [04/Oct/2022 13:36:52] "POST /predict HTTP/1.1" 200 -
